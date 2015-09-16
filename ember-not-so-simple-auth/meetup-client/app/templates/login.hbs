@@ -1,0 +1,15 @@
+<h3>Simple Login</h3>
+
+<form {{action 'authenticate' on='submit'}}>
+  <label for="identification">Username</label>
+  {{input id='identification' placeholder='Username or Email' value=identification}}
+  <label for="password">Password</label>
+  {{input id='password' placeholder='Password' type='password' value=password}}
+  <button type="submit">Login</button>
+</form>
+
+{{#if errorMessage}}
+  <div class="alert alert-danger">
+    <strong>Error:</strong> {{errorMessage}}
+  </div>
+{{/if}}

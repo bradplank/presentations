@@ -1,0 +1,12 @@
+<h2 id="title">Welcome to Ember</h2>
+
+{{#link-to 'index'}}Home{{/link-to}}
+{{#link-to 'profile'}}Profile{{/link-to}}
+
+{{#if session.isAuthenticated}}
+  <button id="logout" {{ action 'invalidateSession' }}>Logout</button>
+{{else}}
+  {{#link-to 'login'}}Login{{/link-to}}
+{{/if}}
+
+{{outlet}}
